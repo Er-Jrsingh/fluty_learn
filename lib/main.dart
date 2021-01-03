@@ -3,6 +3,7 @@ import 'package:fluty_learn/samplePages.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     title: "Bottom Navigation",
     home: BottomMenu(),
   ));
