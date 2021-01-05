@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget{
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.limeAccent,
-          title:Text("All Buttons"),
+          title:Text("All Buttons" , style: TextStyle(color: Colors.indigoAccent),),
        
         ),
         body:Padding(
@@ -20,6 +20,9 @@ class MyApp extends StatelessWidget{
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+
+              /* flat Icon button */
+
             FlatButton(
               shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(20)),
               color: Colors.tealAccent,
@@ -27,6 +30,15 @@ class MyApp extends StatelessWidget{
               print("I am flat button");
             }, child: Text("Flat Button")),
             SizedBox(height:10),
+
+              /* flat Icon button */
+
+            FlatButton.icon(
+              shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(20)),
+              color: Colors.tealAccent, 
+              onPressed: (){print("I am flat Icon button");},
+             icon: Icon(Icons.settings), label: Text("Flat Icon Button")),
+             SizedBox(height:10),
             
           ],),
         )
