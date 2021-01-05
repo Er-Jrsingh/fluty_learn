@@ -61,6 +61,18 @@ class MyApp extends StatelessWidget{
                onPressed: (){
                  print("I am Raised Icon button");
                }),
+
+               /* InkWell Button*/
+
+                     InkWell(
+                 onTap: (){print("I am inkwell ");},
+                                child: Container(
+                   height:100,width:200,
+                   color:Colors.tealAccent,
+                   child:Center(child: Text("Hello I am Inkwell"))
+                 ),
+               ),
+               SizedBox(height:20),
             
           ],),
         )
