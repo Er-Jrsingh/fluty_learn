@@ -5,7 +5,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "MaterilApp Title",
-      theme: ThemeData(primaryColor: Colors.teal[400]),
+      theme: ThemeData(primaryColor: Colors.teal[200]),
       home: Scaffold(
         appBar: AppBar(
           elevation: 10,
@@ -19,20 +19,57 @@ void main() {
           child: Center(
             child: Text(
               "Welcome To Scaffold Tutorial",
-              textDirection: TextDirection.ltr,
+              // textDirection: TextDirection.,
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 25.0,
+                color: Colors.deepOrange,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: Icon(Icons.home, color: Colors.white),
-          backgroundColor: Colors.teal[800],
+          child: Icon(Icons.home, color: Colors.pinkAccent),
+          backgroundColor: Colors.white,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        drawer: Drawer(
+          elevation: 5,
+          child: Column(
+            children: [
+              UserAccountsDrawerHeader(
+                accountName: Text("Jitesh Thakur"),
+                accountEmail: Text("Jitust98@gmail.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.pinkAccent,
+                  child: Text("Jitu"),
+                ),
+              ),
+              ListTile(
+                focusColor: Colors.orangeAccent,
+                title: Text("Enginner"),
+                leading: Icon(Icons.engineering),
+                tileColor: Colors.tealAccent[100],
+                // trailing: Text("Enginner"),
+              ),
+              ListTile(
+                focusColor: Colors.orangeAccent,
+                title: Text("Philanthropist"),
+                leading: Icon(Icons.people_alt),
+                tileColor: Colors.tealAccent[200],
+                // trailing: Text("Enginner"),
+              ),
+              ListTile(
+                focusColor: Colors.orangeAccent,
+                title: Text("AI Enthusiast"),
+                leading: Icon(Icons.developer_board),
+                tileColor: Colors.tealAccent[100],
+                // trailing: Text("Enginner"),
+              ),
+            ],
+          ),
+        ),
       ),
     ),
   );
