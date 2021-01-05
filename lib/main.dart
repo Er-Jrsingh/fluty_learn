@@ -39,6 +39,16 @@ class MyApp extends StatelessWidget{
               onPressed: (){print("I am flat Icon button");},
              icon: Icon(Icons.settings), label: Text("Flat Icon Button")),
              SizedBox(height:10),
+
+             /* RaisedButton*/
+
+             RaisedButton(
+              shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(20)),
+              color: Colors.tealAccent,
+              onPressed: (){
+              print("I am Raised button");
+            }, child: Text("Raised Button")),
+            SizedBox(height:10),
             
           ],),
         )
