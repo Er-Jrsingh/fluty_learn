@@ -73,6 +73,22 @@ class MyApp extends StatelessWidget{
                  ),
                ),
                SizedBox(height:20),
+
+               
+               /* GestureDetector Button*/
+
+               GestureDetector(
+            onTap: (){print("I am Tapped GestureDetector");},
+            onHorizontalDragEnd:(value)=>print(value) ,
+            onVerticalDragDown: (value)=>print(value),
+             child:Container(
+               height: 70,width: 80,
+               decoration: BoxDecoration(
+                 color:Colors.tealAccent,
+                 shape:BoxShape.circle
+               ),
+               child: Center(child:Text("Gestures")),)
+           )
             
           ],),
         )
