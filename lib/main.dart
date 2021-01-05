@@ -27,6 +27,12 @@ void main() {
             ),
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.home, color: Colors.white),
+          backgroundColor: Colors.teal[800],
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
     ),
   );
