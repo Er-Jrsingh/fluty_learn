@@ -9,10 +9,18 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
    return MaterialApp(
      debugShowCheckedModeBanner: false,
+     title: "Buttons",
+     color: Colors.indigo,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.limeAccent,
           title:Text("All Buttons" , style: TextStyle(color: Colors.indigoAccent),),
+
+           /*  Icon Button   */
+
+          actions:[
+            IconButton(icon: Icon(Icons.menu,color:Colors.tealAccent),onPressed: (){print("I am Icon Button");},),
+          ]
        
         ),
         body:Padding(
@@ -61,18 +69,19 @@ class MyApp extends StatelessWidget{
                onPressed: (){
                  print("I am Raised Icon button");
                }),
+                SizedBox(height:10),
 
                /* InkWell Button*/
 
                      InkWell(
                  onTap: (){print("I am inkwell ");},
                                 child: Container(
-                   height:100,width:200,
+                   height:70,width:150,
                    color:Colors.tealAccent,
                    child:Center(child: Text("Hello I am Inkwell"))
                  ),
                ),
-               SizedBox(height:20),
+               SizedBox(height:10),
 
                
                /* GestureDetector Button*/
