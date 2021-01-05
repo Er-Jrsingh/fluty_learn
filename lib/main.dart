@@ -70,6 +70,20 @@ void main() {
             ],
           ),
         ),
+        persistentFooterButtons: [
+          RaisedButton(
+            onPressed: () {},
+            color: Colors.greenAccent,
+            elevation: 20,
+            child: Icon(Icons.print, color: Colors.indigoAccent),
+          ),
+          RaisedButton(
+            onPressed: () {},
+            color: Colors.greenAccent,
+            elevation: 20,
+            child: Icon(Icons.privacy_tip, color: Colors.indigoAccent),
+          ),
+        ],
       ),
     ),
   );
