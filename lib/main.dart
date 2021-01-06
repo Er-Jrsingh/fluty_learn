@@ -29,6 +29,8 @@ class MyApp extends StatelessWidget {
 
           actions: [
             IconButton(
+              splashColor: Colors.deepPurple,
+              tooltip: "I Am Icon Button",
               icon: Icon(Icons.menu, color: Colors.indigo),
               onPressed: () {
                 print("I am Icon Button");
@@ -37,10 +39,11 @@ class MyApp extends StatelessWidget {
           ],
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 25.0, left: 100),
+          padding: const EdgeInsets.only(top: 10.0, left: 100),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+
               /* flat Icon button */
 
               FlatButton(
@@ -141,6 +144,21 @@ class MyApp extends StatelessWidget {
                   child: Center(child: Text("Gestures")),
                 ),
               ),
+              SizedBox(height: 10),
+
+              /* Material  Button*/
+
+              MaterialButton(onPressed: (){print("I am materialButton",);},
+              splashColor: Colors.deepOrange,
+              hoverColor: Colors.indigoAccent,
+              // highlightColor: Colors.lightGreen,
+              elevation: 20,
+              height: 40,
+              child: Text("Material Button "),
+               shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20)),
+                color: Colors.tealAccent,),
+              
             ],
           ),
         ),
