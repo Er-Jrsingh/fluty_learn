@@ -8,9 +8,13 @@ void main() {
           child: Text(
               "I Am Jitu Thakur",
               textDirection:TextDirection.ltr,
-              style: TextStyle(color: Colors.white , fontSize: 30,fontWeight:FontWeight.bold,)
+              style: myFont()
           )
       ),
     )
   );
+}
+
+TextStyle myFont(){
+  return TextStyle(fontFamily: 'Anurati',color: Colors.white , fontSize: 30,fontWeight:FontWeight.bold,);
 }
