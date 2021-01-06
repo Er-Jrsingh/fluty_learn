@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluty_learn/snack_body.dart';
 
 void main() {
   runApp(
@@ -22,9 +21,29 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.indigoAccent,
       ),
 
-      /* Snack Bar Solution 1  - By Moving Body Into Another File*/
+      /*  Snack Bar Solution 2  - By Builder Method */
 
-      body: SnackyB()
+      body: Builder(builder: (context) {
+        return Center(
+          child: FlatButton(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            color: Colors.indigoAccent,
+            onPressed: () {
+              final snackbar = SnackBar(
+                content: Text("Hii..... Snacky !!!"),
+              );
+              Scaffold.of(context).showSnackBar(snackbar);
+            },
+            child: Text(
+              "Flat Button",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+          ),
+        );
+      }),
     );
   }
 }
