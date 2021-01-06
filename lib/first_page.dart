@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
 
-class MyPageDetails extends StatelessWidget {
+class MyPageFirst extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Details Page"),
+        title: Text("1st Page",style: TextStyle(fontFamily:"Cursive"),),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "Details Page",
-              style: TextStyle(
-                fontSize: 25.0,
-              ), 
-            ),
-            FloatingActionButton(
+            RaisedButton(
+              color: Colors.indigoAccent,
+              textColor: Colors.white,
               onPressed: () { Navigator.pop(context); },
-            child: Icon(Icons.arrow_back),)
+              child:Text("Go Home",),
+            )
           ],
         ),
       ),
