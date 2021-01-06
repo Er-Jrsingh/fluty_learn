@@ -6,6 +6,7 @@ class MyPageSec extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("2nd Page",style: TextStyle(fontFamily:"Cursive"),),
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Column(

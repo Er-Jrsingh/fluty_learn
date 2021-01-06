@@ -6,6 +6,7 @@ class MyPageFirst extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("1st Page",style: TextStyle(fontFamily:"Cursive"),),
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Column(
