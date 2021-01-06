@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:fluty_learn/snack_body.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Snacky",
+      title: "Snack !!!!",
       home: MyApp(),
     ),
   );
@@ -21,27 +22,9 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.indigoAccent,
       ),
 
-      /* Snack Bar Problem  */
+      /* Snack Bar Solution 1  - By Moving Body Into Another File*/
 
-      body: Center(
-        child: FlatButton(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          color: Colors.indigoAccent,
-          onPressed: () {
-            final snackbar = SnackBar(
-              content: Text("Hii !! Snacky !!!"),
-            );
-            Scaffold.of(context).showSnackBar(snackbar);
-          },
-          child: Text(
-            "Flat Button",
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ),
+      body: SnackyB()
     );
   }
 }
