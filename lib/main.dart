@@ -21,11 +21,8 @@ class _SplashScreen extends State<SplashScreen> {
 
     Timer(
       Duration(seconds: 2),
-      () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => Home(),
-        ),
+      () => Navigator.of(context).pushReplacement(  MaterialPageRoute(
+          builder: (context) => Home(),)
       ),
     );
   }
@@ -36,7 +33,7 @@ class _SplashScreen extends State<SplashScreen> {
       backgroundColor: Colors.deepPurpleAccent,
       body: Center(
         child: Text(
-          " Welcome DoDo !! ",
+          " Hello DoDo !! ",
           style: TextStyle(
             fontSize: 40.0,
             color: Colors.white,
@@ -52,14 +49,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Details Page"),
+        title: Text("Home Page "),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              " HELLO World  !!!! ",
+              " Hello World  ! ! ! ! ",
               style: TextStyle(
                 fontSize: 25.0,
               ),
