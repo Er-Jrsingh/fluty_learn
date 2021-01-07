@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
                   "Flat Button",
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 2),
 
               /* flat Icon button */
 
@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
                   "Flat Icon Button",
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 2),
 
               /* RaisedButton*/
 
@@ -92,7 +92,7 @@ class MyApp extends StatelessWidget {
                 },
                 child: Text("Raised Button"),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 2),
 
               /* Raised Icon Button*/
 
@@ -101,7 +101,7 @@ class MyApp extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(80),
                 ),
-                elevation: 20,
+                elevation: 10,
                 color: Colors.tealAccent,
                 label: Text(
                   "Raised Icon Button",
@@ -112,7 +112,7 @@ class MyApp extends StatelessWidget {
                   );
                 },
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 8),
 
               /* InkWell Button*/
 
@@ -126,7 +126,7 @@ class MyApp extends StatelessWidget {
                     color: Colors.tealAccent,
                     child: Center(child: Text("Hello I am Inkwell"))),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 8),
 
               /* GestureDetector Button*/
 
@@ -144,7 +144,7 @@ class MyApp extends StatelessWidget {
                   child: Center(child: Text("Gestures")),
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
 
               /* Material  Button*/
 
@@ -169,10 +169,29 @@ class MyApp extends StatelessWidget {
           onPressed: () {
             print("I Am Floating Action Button");
           },
-          label: Text('FloatActiBtn'),
+          label: Text('floatBtn'),
           icon: Icon(Icons.thumb_up),
           backgroundColor: Colors.pink,
         ),
+
+         floatingActionButtonLocation:FloatingActionButtonLocation.startDocked,
+
+         persistentFooterButtons: [
+           
+          RaisedButton(
+            onPressed: () {print("I Am Persistant Footer Button");},
+            color: Colors.greenAccent,
+            elevation: 10,
+            child: Icon(Icons.print, color: Colors.indigoAccent),
+          ),
+          RaisedButton(
+            onPressed: () {print("I Am Persistant Footer Button");},
+            color: Colors.greenAccent,
+            elevation: 10,
+            child: Icon(Icons.privacy_tip, color: Colors.indigoAccent),
+          ),
+        ],
+
       ),
     );
   }
