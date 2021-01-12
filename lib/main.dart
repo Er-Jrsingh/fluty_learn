@@ -38,9 +38,10 @@ class _MyAppState extends State<MyApp> {
     fun2();
   }
 
-  void fun2() {
-    Future.delayed(Duration(seconds: 5),(){
-    print("Hola! I'm Fun2 ");
+  void fun2() async {
+
+    await Future.delayed(Duration(seconds: 5),(){
+    print("Hola! I'm Future ");
     });
 
     print("Hola! Hola! Hola! I'm Fun2");
