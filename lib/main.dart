@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluty_learn/samplePages.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -17,31 +16,77 @@ class BottomMenu extends StatefulWidget {
 }
 
 class _BottomMenuState extends State<BottomMenu> {
-  var _pagesData = [HomePage(), AboutPage(), ServicesPage()];
-  int _selectedItem = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
-        "Bottom Navigation",
-      )),
-      body: Center(
-        child: _pagesData[_selectedItem],
+        title: Text(
+          "Bottom Navigation",
+        ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.info), label: "About"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.cleaning_services), label: "Services"),
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: SizedBox(
+                height: 40.0,
+                child: InkWell(
+                  onTap: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.search,
+                      ),
+                      Text("Search"),
+                    ],
+                    
+                  ),
+                ),
+              ),
+            ),
+
+            Expanded(
+              child: SizedBox(
+                height: 40.0,
+                child: InkWell(
+                  onTap: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.security,
+                      ),
+                      Text("security"),
+                    ],
+                    
+                  ),
+                ),
+              ),
+            ),
+
+            Expanded(
+              child: SizedBox(
+                height: 40.0,
+                child: InkWell(
+                  onTap: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.settings,
+                      ),
+                      Text("setting"),
+                    ],
+                    
+                  ),
+                ),
+              ),
+            )
+
           ],
-          currentIndex: _selectedItem,
-          onTap: (setValue) {
-            setState(() {
-              _selectedItem = setValue;
-            });
-          }),
+        ),
+      ),
     );
   }
 }
