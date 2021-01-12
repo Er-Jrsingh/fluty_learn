@@ -19,12 +19,14 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             Container(
               width: MediaQuery.of(context).size.width*0.5,
+              height:MediaQuery.of(context).size.height*0.5 ,
               decoration: BoxDecoration(
                 color: Colors.deepOrange,
               ),
             ),
             Container(
               width: MediaQuery.of(context).size.width*0.5,
+              height:MediaQuery.of(context).size.height*0.5 ,
               decoration: BoxDecoration(
                 color: Colors.deepPurpleAccent,
               ),
