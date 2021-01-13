@@ -1,47 +1,69 @@
 import 'package:flutter/material.dart';
-import 'package:fluty_learn/samplePages.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    title: "Bottom Navigation",
-    home: BottomMenu(),
-  ));
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Curved Navigation",
+      home: MyApp(),
+    ),
+  );
 }
 
-class BottomMenu extends StatefulWidget {
+class MyApp extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
-    return _BottomMenuState();
-  }
+  _MyAppState createState() => _MyAppState();
 }
 
-class _BottomMenuState extends State<BottomMenu> {
-  var _pagesData = [HomePage(), AboutPage(), ServicesPage()];
-  int _selectedItem = 0;
+class _MyAppState extends State<MyApp> {
+  String txt = " ";
+  Color bgColor = Colors.deepPurpleAccent;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: Text(
-        "Bottom Navigation",
-      )),
-      body: Center(
-        child: _pagesData[_selectedItem],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.info), label: "About"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.cleaning_services), label: "Services"),
+        appBar: AppBar(
+          title: Text("Curved Navigation"),
+          backgroundColor: Colors.deepPurpleAccent,
+        ),
+        bottomNavigationBar: CurvedNavigationBar(
+          backgroundColor: Colors.deepPurpleAccent,
+          height: 50,
+          items: <Widget>[
+            Icon(Icons.login, size: 15),
+            Icon(Icons.home, size: 15),
+            Icon(Icons.logout, size: 15),
           ],
-          currentIndex: _selectedItem,
-          onTap: (setValue) {
-            setState(() {
-              _selectedItem = setValue;
-            });
-          }),
-    );
+          onTap: (index) {
+            if (index == 0) {
+              setState(() {
+                txt = "Hola! I'm Login";
+                bgColor = Colors.pinkAccent;
+              });
+            }
+
+            if (index == 1) {
+              setState(() {
+                txt = " Bonjour !!! Welcome To Home ";
+                bgColor = Colors.deepPurpleAccent;
+              });
+            }
+
+            if (index == 2) {
+              setState(() {
+                txt = "Ohh.. Dear!! I'm Gone!!!..";
+                bgColor = Colors.deepPurpleAccent[300];
+              });
+            }
+          },
+        ),
+        backgroundColor: bgColor,
+        body: Center(
+          child: Container(
+            child: Text(txt),
+          ),
+        ));
   }
 }
+  
