@@ -5,6 +5,10 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "FlutyLearn",
+      theme: ThemeData(
+        backgroundColor: Colors.deepPurple
+        ,fontFamily: "cursive",
+        ),
       home: MyApp(),
     ),
   );
