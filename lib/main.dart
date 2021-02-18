@@ -4,11 +4,11 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "FlutyLearn",
+      title: "Constrained Box",
       theme: ThemeData(
-        backgroundColor: Colors.deepPurple
-        ,fontFamily: "cursive",
-        ),
+        backgroundColor: Colors.red,
+        fontFamily: "cursive",
+      ),
       home: MyApp(),
     ),
   );
@@ -19,7 +19,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("FlutyLearn"),
+        backgroundColor: Colors.greenAccent,
+        title: Text("Constrained Box "),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+              maxHeight: 100.0,
+              minHeight: 50.0,
+              maxWidth: 200.0,
+              minWidth: 150.0),
+          child: Container(
+            width: 600,
+            height: 600,
+            color: Colors.pinkAccent,
+          ),
+        ),
       ),
     );
   }
