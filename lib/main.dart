@@ -25,11 +25,7 @@ class MyApp extends StatelessWidget {
       ),
       body: Center(
         child: ConstrainedBox(
-          constraints: BoxConstraints(
-              maxHeight: 100.0,
-              minHeight: 50.0,
-              maxWidth: 200.0,
-              minWidth: 150.0),
+          constraints: BoxConstraints.expand(),
           child: Container(
             width: 600,
             height: 600,
