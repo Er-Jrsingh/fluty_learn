@@ -12,29 +12,38 @@ class Homi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrange,
-      body: Padding(
-        padding: const EdgeInsets.all(100.0),
-        child: Row(children: [
-          Center(
-            child: Text(
-              "H",
-              style:TextStyle(color: Colors.white,fontSize: 40),
-            ),
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: Text("Rich Text"),
+        centerTitle: true,
+        backgroundColor: Colors.indigoAccent,
+      ),
+      body: Center(
+        child: RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(
+            text: "Hola!!",
+            style: DefaultTextStyle.of(context).style,
+            children: [
+              TextSpan(
+                text: "I",
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20,color: Colors.lightGreen),
+              ),
+               TextSpan(
+                text: "Am",
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 10,color: Colors.tealAccent),
+              ),
+               TextSpan(
+                text: "Jitesh",
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 40,color: Colors.pink,fontStyle:FontStyle.italic),
+              ),
+               TextSpan(
+                text: "Singh",
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20,color: Colors.yellowAccent),
+              ),
+            ],
           ),
-          Baseline(
-            baselineType: TextBaseline.alphabetic,
-            baseline: 50,
-            child: Text(
-              "2",
-               style:TextStyle(color: Colors.white,fontSize: 30),
-            ),
-          ),
-          Text(
-              "O",
-              style:TextStyle(color: Colors.white,fontSize: 40),
-            ),
-        ],),
+        ),
       ),
     );
   }
