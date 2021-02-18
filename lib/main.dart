@@ -27,9 +27,9 @@ class MyApp extends StatelessWidget {
       ),
       body: Center(
         child: ConstrainedBox(
-          constraints: BoxConstraints.loose(Size(100,50)),
+          constraints: BoxConstraints.tight(Size(100,200)),
           child: Container(
-            width: 600,
+            width: 10,
             height: 600,
             color: Colors.pinkAccent,
           ),
