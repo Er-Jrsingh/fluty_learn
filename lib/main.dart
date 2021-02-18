@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       ),
       body: Center(
         child: ConstrainedBox(
-          constraints: BoxConstraints.expand(),
+          constraints: BoxConstraints.loose(Size(100,50)),
           child: Container(
             width: 600,
             height: 600,
