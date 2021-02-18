@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Homi(),
     ),
   );
@@ -23,7 +24,6 @@ class Homi extends StatelessWidget {
           textAlign: TextAlign.center,
           text: TextSpan(
             text: "Hola!!",
-            style: DefaultTextStyle.of(context).style,
             children: [
               TextSpan(
                 text: "I",
@@ -35,7 +35,7 @@ class Homi extends StatelessWidget {
               ),
                TextSpan(
                 text: "Jitesh",
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 40,color: Colors.pink,fontStyle:FontStyle.italic),
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 40,color: Colors.pinkAccent,fontStyle:FontStyle.italic),
               ),
                TextSpan(
                 text: "Singh",
