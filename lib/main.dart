@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: "AboutContainer",
+    title: "Container Properties",
     home: HomePage(),
   ));
 }
@@ -12,7 +12,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("AboutContainer"),
+        title: Text(
+          "Container Properties",
+        ),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -37,19 +40,30 @@ class HomePage extends StatelessWidget {
                         color: Colors.green,
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      width: 100,
-                      height: 100,
-                      color: Colors.yellow,
-                    ),
                     Expanded(
+                      flex: 2,
                       child: Container(
                         color: Colors.pink,
                         width: 100,
                         height: 100,
                       ),
-                    )
+                    ),
+                    FractionallySizedBox(
+                      widthFactor: 0.7,
+                      alignment: Alignment.center,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        width: 100,
+                        height: 100,
+                        color: Colors.yellow,
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      width: 100,
+                      height: 100,
+                      color: Colors.redAccent,
+                    ),
                   ],
                 ),
               ),
