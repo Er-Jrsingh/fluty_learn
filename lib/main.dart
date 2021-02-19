@@ -28,11 +28,14 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      width: 100,
-                      height: 100,
-                      color: Colors.green,
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        width: 100,
+                        height: 100,
+                        color: Colors.green,
+                      ),
                     ),
                     Container(
                       padding: const EdgeInsets.all(8),
@@ -40,10 +43,12 @@ class HomePage extends StatelessWidget {
                       height: 100,
                       color: Colors.yellow,
                     ),
-                    Container(
-                      color: Colors.pink,
-                      width: 100,
-                      height: 100,
+                    Expanded(
+                      child: Container(
+                        color: Colors.pink,
+                        width: 100,
+                        height: 100,
+                      ),
                     )
                   ],
                 ),
