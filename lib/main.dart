@@ -58,11 +58,15 @@ class HomePage extends StatelessWidget {
                         color: Colors.yellow,
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      width: 100,
-                      height: 100,
-                      color: Colors.redAccent,
+                    SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        width: 100,
+                        height: 100,
+                        color: Colors.redAccent,
+                      ),
                     ),
                   ],
                 ),
