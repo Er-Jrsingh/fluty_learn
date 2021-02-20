@@ -4,11 +4,10 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "FlutyLearn",
+      title: "ButtonBar",
       theme: ThemeData(
-        backgroundColor: Colors.deepPurple
-        ,fontFamily: "cursive",
-        ),
+        backgroundColor: Colors.deepPurple,
+      ),
       home: MyApp(),
     ),
   );
@@ -19,7 +18,40 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("FlutyLearn"),
+        title: Text("ButtonBar"),centerTitle: true,
+      ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.white,
+        child: ButtonBar(
+          alignment: MainAxisAlignment.center,
+          children: [
+            RaisedButton(
+              disabledColor: Colors.pink,
+              child: Text(
+                "Raised",
+                style: TextStyle(color: Colors.white),
+              ),
+              onPressed: null,
+            ),
+            IconButton(
+              iconSize: 50,
+              disabledColor: Colors.tealAccent,
+              icon: Icon(
+                Icons.star,
+              ),
+              onPressed: null,
+            ),
+            OutlinedButton(
+              child: Text(
+                "Outline",
+                style: TextStyle(color: Colors.deepPurple),
+              ),
+              onPressed: null,
+            ),
+          ],
+        ),
       ),
     );
   }
