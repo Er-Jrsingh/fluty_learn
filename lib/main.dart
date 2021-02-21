@@ -16,13 +16,21 @@ void main() {
 class MyApp extends StatelessWidget {
   List<Widget> containers = [
     Center(
-      child: Text("Recieved Message"),
+      child: Tooltip(
+        message: "Alll Recived Messages",
+        verticalOffset: -150,
+        child: Text(
+          "Recieved Message",
+        ),
+      ),
     ),
     Center(
-      child: Text("Send Message"),
+      child: Tooltip(
+          message: "Alll Send Messages", child: Text("Send Message"),verticalOffset:100 ,),
     ),
     Center(
-      child: Text("Delete Message"),
+      child: Tooltip(
+          message: "Messages To Delete", child: Text("Delete Message")),
     ),
   ];
   @override
